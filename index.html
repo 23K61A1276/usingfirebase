@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Login Section -->
+    <div id="loginPage" class="container">
+        <div class="card">
+            <h1>Student Management Portal</h1>
+            <h3>Login</h3>
+
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+
+            <button onclick="login()">Login</button>
+
+            <p class="hint">Username: admin | Password: admin123</p>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="hidden">
+
+        <header>
+            <h1>Student Management Portal</h1>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h2 id="totalStudents">0</h2>
+                <p>Total Students</p>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h2>Add / Update Student</h2>
+
+            <input type="hidden" id="editIndex">
+
+            <input type="text" id="name" placeholder="Student Name">
+
+            <input type="text" id="roll" placeholder="Roll Number">
+
+            <input type="text" id="dept" placeholder="Department">
+
+            <button onclick="saveStudent()">Save Student</button>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search Student..." onkeyup="searchStudent()">
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Roll No</th>
+                        <th>Department</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTable">
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

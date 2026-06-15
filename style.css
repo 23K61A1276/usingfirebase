@@ -1,0 +1,147 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    width:350px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+.card h1{
+    margin-bottom:15px;
+}
+
+.card input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+}
+
+.card button{
+    width:100%;
+    padding:12px;
+    background:#007bff;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+.hint{
+    margin-top:10px;
+    color:gray;
+    font-size:12px;
+}
+
+.hidden{
+    display:none;
+}
+
+header{
+    background:#007bff;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logout-btn{
+    background:red;
+    color:white;
+    border:none;
+    padding:10px;
+    cursor:pointer;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    margin:20px;
+}
+
+.stat-card{
+    background:white;
+    padding:20px;
+    width:250px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container,
+.search-container,
+.table-container{
+    width:90%;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.form-container input,
+.search-container input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+}
+
+.form-container button{
+    width:100%;
+    padding:12px;
+    background:green;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+.edit-btn{
+    background:orange;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+.delete-btn{
+    background:red;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+    table{
+        font-size:12px;
+    }
+}

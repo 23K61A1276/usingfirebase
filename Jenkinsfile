@@ -32,10 +32,10 @@ pipeline {
         }
 
         stage('Deploy to Firebase') {
-            steps {
-                bat '"C:\\Users\\mjana\\AppData\\Roaming\\npm\\firebase.cmd" deploy --token %FIREBASE_TOKEN%'
-            }
-        }
+    steps {
+        bat '"C:\\Users\\mjana\\AppData\\Roaming\\npm\\firebase.cmd" deploy --project hello --only hosting --token %FIREBASE_TOKEN%'
+    }
+}
     }
 
     post {

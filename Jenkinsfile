@@ -40,11 +40,11 @@ pipeline {
 
     post {
         success {
-            echo 'Website deployed successfully to Firebase!'
+            echo 'Firebase Deployment Successful!'
         }
 
         failure {
-            echo 'Deployment failed.'
+            echo 'Firebase Deployment Failed!'
         }
     }
 }

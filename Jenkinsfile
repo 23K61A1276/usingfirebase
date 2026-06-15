@@ -25,10 +25,26 @@ pipeline {
             }
         }
 
+        stage('Check Firebase') {
+            steps {
+                bat '"C:\\Users\\mjana\\AppData\\Roaming\\npm\\firebase.cmd" --version'
+            }
+        }
+
         stage('Deploy to Firebase') {
             steps {
-                bat 'firebase deploy --token %FIREBASE_TOKEN%'
+                bat '"C:\\Users\\mjana\\AppData\\Roaming\\npm\\firebase.cmd" deploy --token %FIREBASE_TOKEN%'
             }
+        }
+    }
+
+    post {
+        success {
+            echo 'Website deployed successfully to Firebase!'
+        }
+
+        failure {
+            echo 'Deployment failed.'
         }
     }
 }
